@@ -1,0 +1,15 @@
+# {{ ansible_managed }}
+#
+
+version: '3.2'
+
+services:
+  "license":
+     image: "isuhpc/license:latest"
+     container_name: "license-1"
+     restart: unless-stopped
+     tty: true
+     hostname: "license-1"
+     volumes:
+       - ./license.dat:/opt/intel/licenseserver/license/server.lic:ro
+     mac_address: aa:aa:aa:aa:aa:aa
