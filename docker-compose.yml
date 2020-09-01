@@ -11,5 +11,6 @@ services:
      tty: true
      hostname: "license-1"
      volumes:
-       - ./license.dat:/opt/intel/licenseserver/license/server.lic:ro
+       - ./license.dat:/opt/intel/licenseserver/license/server.lic:z,ro
+       - ./license.log:/var/log/license.log:z,ro
      mac_address: aa:aa:aa:aa:aa:aa

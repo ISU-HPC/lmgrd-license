@@ -11,5 +11,5 @@ RUN touch /opt/intel/licenseserver/server.lic
 
 WORKDIR /opt/intel/licenseserver/
 #CMD sleep infinity
-CMD /opt/intel/licenseserver/lmgrd -c /opt/intel/licenseserver/server.lic -l /dev/stdout -z
+CMD /opt/intel/licenseserver/lmgrd -c /opt/intel/licenseserver/server.lic -l /var/log/license.log -z
 
