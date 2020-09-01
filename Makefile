@@ -7,6 +7,10 @@ build:
 run:
 	sudo docker run --rm -d --name $(PROG)  isuhpc/$(PROG):latest
 
+run-lic:
+	sudo docker run --rm -d --name $(PROG)  -v $(PWD)/license.dat:/opt/intel/licenseserver/server.lic isuhpc/$(PROG):latest
+
+
 exec:
 	sudo docker exec -it $(PROG) bash
 
